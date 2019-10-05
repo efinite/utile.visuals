@@ -1,9 +1,11 @@
 Package: utile.visuals
 Title: Create Visuals for Publication
-Version: 0.2.1
+Version: 0.2.2
 Authors@R: c(person('Eric', 'Finnesgard', email = 'finnesgard.eric@mayo.edu', role = c('aut', 'cre')))
 Description: A small set of functions for making visuals for publication in 'ggplot2'. Key functions include geom_stepconfint() for drawing a step confidence interval on a Kaplan-Meier curve and theme_white()/theme_black() which are minimalist 'ggplot2' themes with transparent backgrounds.
 License: LGPL (>= 2)
+URL: https://github.com/efinite/utile.visuals
+BugReports: https://github.com/efinite/utile.visuals/issues
 Encoding: UTF-8
 LazyData: TRUE
 Depends: R (>= 3.4.0)
