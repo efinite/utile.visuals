@@ -4,8 +4,12 @@
 \alias{ggrisktable}
 \title{Create a ggplot2 table showing the number at risk}
 \usage{
-ggrisktable(fit = NULL, times = NULL, text.color = "black",
-  strata.order = NULL)
+ggrisktable(
+  fit = NULL,
+  times = NULL,
+  text.color = "black",
+  strata.order = NULL
+)
 }
 \arguments{
 \item{fit}{Required. survival::survfit() object.}

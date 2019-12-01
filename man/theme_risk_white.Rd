@@ -4,8 +4,12 @@
 \alias{theme_risk_white}
 \title{Minimalist white risk table theme for ggplot2}
 \usage{
-theme_risk_white(base_size = 10, base_family = "",
-  base_line_size = base_size/22, base_rect_size = base_size/22)
+theme_risk_white(
+  base_size = 10,
+  base_family = "",
+  base_line_size = base_size/22,
+  base_rect_size = base_size/22
+)
 }
 \arguments{
 \item{base_size}{Optional. Numeric. Base font size. Defaults to 10.}

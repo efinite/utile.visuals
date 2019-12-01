@@ -4,8 +4,12 @@
 \alias{theme_white}
 \title{Minimalist white theme for ggplot2}
 \usage{
-theme_white(base_size = 11, base_family = "",
-  base_line_size = base_size/22, base_rect_size = base_size/22)
+theme_white(
+  base_size = 11,
+  base_family = "",
+  base_line_size = base_size/22,
+  base_rect_size = base_size/22
+)
 }
 \arguments{
 \item{base_size}{Optional. Numeric. Base font size. Defaults to 11.}

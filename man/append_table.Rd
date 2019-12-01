@@ -4,9 +4,16 @@
 \alias{append_table}
 \title{Append a ggplot2 table to the bottom of a ggplot2 plot}
 \usage{
-append_table(plot = NULL, table = NULL, plot.height = 1,
-  table.height = 0.1, plot.width = 1, extract.legend = TRUE,
-  legend.width = 0.2, legend.offset = -15)
+append_table(
+  plot = NULL,
+  table = NULL,
+  plot.height = 1,
+  table.height = 0.1,
+  plot.width = 1,
+  extract.legend = TRUE,
+  legend.width = 0.2,
+  legend.offset = -15
+)
 }
 \arguments{
 \item{plot}{Required. ggplot2::ggplot() object. If a legend is present, it will be

@@ -3,7 +3,7 @@
 [![Total Downloads](https://cranlogs.r-pkg.org/badges/grand-total/utile.visuals)](https://CRAN.R-project.org/package=utile.visuals)
 
 ## Overview
-A small set of functions for making visuals for publication in ggplot2. Key functions include `geom_stepconfint()` for drawing a step confidence interval on a ggplot2 KM curve and `theme_white()`/`theme_black()` which are minimalist ggplot2 themes with transparent backgrounds.
+A small set of functions for making visuals for publication in ggplot2. Includes minimalist themes and a suite of tools for building Kaplan-Meier curves with risk tables.
 
 ## Functions
 ### > gg

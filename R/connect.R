@@ -8,8 +8,7 @@ utils::globalVariables(c('strata', 'n.risk'))
 #' tidy'd with broom::tidy().
 #' @return A tibble containing the original data with appended points that connect the
 #' curve with to the plot origin.
-#' @note Adapted from an unexported function called .connect2origin() in the survminer
-#' package created by Alboukadel Kassambara.
+#' @note Adapted from the survminer package created by Alboukadel Kassambara.
 #' @examples
 #' library(survival)
 #' library(broom) # tidy() model data

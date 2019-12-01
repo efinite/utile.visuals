@@ -20,8 +20,7 @@ the KM curve will not connect with the origin of the plot. This tool appends dat
 connecting the lines to the origin.
 }
 \note{
-Adapted from an unexported function called .connect2origin() in the survminer
-package created by Alboukadel Kassambara.
+Adapted from the survminer package created by Alboukadel Kassambara.
 }
 \examples{
 library(survival)

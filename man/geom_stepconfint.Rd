@@ -4,8 +4,14 @@
 \alias{geom_stepconfint}
 \title{Step function confidence intervals for ggplot2}
 \usage{
-geom_stepconfint(mapping = NULL, data = NULL, stat = "identity",
-  position = "identity", na.rm = FALSE, ...)
+geom_stepconfint(
+  mapping = NULL,
+  data = NULL,
+  stat = "identity",
+  position = "identity",
+  na.rm = FALSE,
+  ...
+)
 }
 \arguments{
 \item{mapping}{Aesthetic mappings with aes() function. Like geom_ribbon(), you must provide
