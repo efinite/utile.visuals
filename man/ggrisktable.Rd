@@ -4,13 +4,17 @@
 \alias{ggrisktable}
 \title{Create a ggplot2 table showing the number at risk}
 \usage{
-ggrisktable(fit = NULL, times = NULL, strata.order = NULL)
+ggrisktable(fit = NULL, times = NULL, text.color = "black",
+  strata.order = NULL)
 }
 \arguments{
 \item{fit}{Required. survival::survfit() object.}
 
 \item{times}{Required. Numeric. One or more time points to calculate
 the number at risk for.}
+
+\item{text.color}{Optional. Character. Color of text within table. Defaults
+to 'black'.}
 
 \item{strata.order}{Optional. Character. Ordered names of strata factor
 levels.}

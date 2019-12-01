@@ -7,6 +7,8 @@ utils::globalVariables(c('time', 'strata', 'n.risk'))
 #' @param fit Required. survival::survfit() object.
 #' @param times Required. Numeric. One or more time points to calculate
 #' the number at risk for.
+#' @param text.color Optional. Character. Color of text within table. Defaults
+#' to 'black'.
 #' @param strata.order Optional. Character. Ordered names of strata factor
 #' levels.
 #' @return An unformatted ggplot2 table showing the number at risk.
@@ -21,7 +23,7 @@ utils::globalVariables(c('time', 'strata', 'n.risk'))
 #'    strata.order = c('0', '1')
 #' ) + theme_risk_black()
 #' @export
-ggrisktable <- function (fit = NULL, times = NULL, strata.order = NULL) {
+ggrisktable <- function (fit = NULL, times = NULL, text.color = 'black', strata.order = NULL) {
 
   # Hard stops
   if (is.null(fit) | class(fit) != 'survfit') stop('No valid fit object provided. [Check: \'fit\']')
@@ -45,5 +47,5 @@ ggrisktable <- function (fit = NULL, times = NULL, strata.order = NULL) {
   ggplot2::ggplot(
     risk_table,
     ggplot2::aes(x = time, y = strata, label = n.risk)
-  ) + ggplot2::geom_text()
+  ) + ggplot2::geom_text(color = text.color)
 }

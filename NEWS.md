@@ -1,3 +1,6 @@
+# utile.visuals 0.2.3
+* Added parameter to `ggrisktable()` to allow preemptive specification of text color.
+
 # utile.visuals 0.2.2
 * Fixed inconsistency within `theme_white()`.
 
