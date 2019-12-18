@@ -27,6 +27,7 @@ utils::globalVariables(c('strata', 'n.risk'))
 connect_origin <- function (data) {
   if ('n.risk' %in% colnames(data)) data <- dplyr::arrange(.data = data, dplyr::desc(n.risk))
   if ('strata' %in% colnames(data)) origin <- dplyr::distinct(.data = data, strata, .keep_all = TRUE)
+  else origin <- data
   origin[intersect(c('time', 'n.censor', 'std.error', "n.event"), colnames(origin))] <- 0
   origin[c('estimate', 'conf.high', 'conf.low')] <- 1.0
   dplyr::bind_rows(origin, data)
