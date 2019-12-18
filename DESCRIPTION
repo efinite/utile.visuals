@@ -1,6 +1,6 @@
 Package: utile.visuals
 Title: Create Visuals for Publication
-Version: 0.2.3
+Version: 0.2.4
 Authors@R: c(person('Eric', 'Finnesgard', email = 'finnesgard.eric@mayo.edu', role = c('aut', 'cre')))
 Description: A small set of functions for making visuals for publication in ggplot2. Includes minimalist themes with transparent backgrounds and a suite of tools for building Kaplan-Meier curves with risk tables.
 License: LGPL (>= 2)

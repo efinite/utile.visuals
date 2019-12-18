@@ -1,3 +1,6 @@
+# utile.visuals 0.2.4
+* `connect_origin()` now verifies whether a strata column is present.
+
 # utile.visuals 0.2.3
 * Added parameter to `ggrisktable()` to allow preemptive specification of text color.
 
