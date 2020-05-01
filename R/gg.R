@@ -31,7 +31,7 @@ ggrisktable <- function (fit = NULL, times = NULL, text.color = 'black', strata.
   if (!is.null(strata.order) & !is.character(strata.order)) stop('Invalid strata order data provided. [Check: \'strata.order\']')
 
   # Generate risk table and order
-  risk_table <- utile.tools::tabulate_at_risk(fit, times)
+  risk_table <- .tabulate_at_risk(fit, times)
 
   # Reorder strata
   if (is.character(strata.order))

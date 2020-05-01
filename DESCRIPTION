@@ -9,11 +9,11 @@ BugReports: https://github.com/efinite/utile.visuals/issues
 Encoding: UTF-8
 LazyData: TRUE
 Depends: R (>= 3.4.0)
-Imports: ggplot2,
-  purrr,
-  utile.tools (>= 0.2.0),
+Imports:
+  dplyr,
+  ggplot2,
   gridExtra,
-  dplyr
+  purrr
 Suggests:
   survival,
   broom,
