@@ -28,11 +28,11 @@ position adjustment function.}
 \item{na.rm}{If FALSE, the default, missing values are removed with a warning. If TRUE,
 missing values are silently removed.}
 
-\item{...}{Optional. All the other miscellaneous ggplot geom_ribbon() arguments.}
+\item{...}{Optional. Any other ggplot geom_ribbon() arguments.}
 }
 \description{
 Produces a step function confidence interval for survival curves. Essentially
-the geom_step() for confidence intervals which ggplot2 elects not to provide.
+the geom_step() for confidence intervals which ggplot2 does not provide.
 }
 \note{
 Adapted from the survminer package <https://github.com/kassambara/survminer>.
@@ -43,6 +43,7 @@ library(broom)
 library(ggplot2)
 
 fit <- survfit(Surv(time, status) ~ trt, data = diabetic)
+fit <- survfit0(fit) # connect origin
 
 ggplot(
   data = tidy(fit),

@@ -1,3 +1,6 @@
+# utile.visuals 0.3.0
+* `connect_origin()` was removed as it redundantly replicated the function of `survival::survfit0()`. Thanks for the tip, Beth!
+
 # utile.visuals 0.2.4
 * `connect_origin()` now verifies whether a strata column is present.
 

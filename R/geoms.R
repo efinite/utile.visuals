@@ -1,6 +1,6 @@
 #' @title Step function confidence intervals for ggplot2
 #' @description Produces a step function confidence interval for survival curves. Essentially
-#' the geom_step() for confidence intervals which ggplot2 elects not to provide.
+#' the geom_step() for confidence intervals which ggplot2 does not provide.
 #' @param mapping Aesthetic mappings with aes() function. Like geom_ribbon(), you must provide
 #' columns for x, ymin (lower limit), ymax (upper limit).
 #' @param data The data to be displayed in this layer. Can inherit from ggplot parent.
@@ -10,7 +10,7 @@
 #' position adjustment function.
 #' @param na.rm If FALSE, the default, missing values are removed with a warning. If TRUE,
 #' missing values are silently removed.
-#' @param ... Optional. All the other miscellaneous ggplot geom_ribbon() arguments.
+#' @param ... Optional. Any other ggplot geom_ribbon() arguments.
 #' @note Adapted from the survminer package <https://github.com/kassambara/survminer>.
 #' @examples
 #' library(survival)
@@ -18,6 +18,7 @@
 #' library(ggplot2)
 #'
 #' fit <- survfit(Surv(time, status) ~ trt, data = diabetic)
+#' fit <- survfit0(fit) # connect origin
 #'
 #' ggplot(
 #'   data = tidy(fit),
