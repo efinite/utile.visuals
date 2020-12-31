@@ -10,6 +10,6 @@
         )
     ),
     time = fit_summary$time,
-    n.risk = fit_summary$n.risk,
+    n.risk = fit_summary$n.risk
   )
 }
