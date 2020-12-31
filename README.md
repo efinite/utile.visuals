@@ -20,7 +20,3 @@ A small set of functions for making visuals for publication in ggplot2. Includes
 
 ### > append_
 - `append_table()`: Aligns axes and combines a ggplot2 plot and table into a single plot. Can handle legends.
-
-### > connect_
-- `connect_origin()`: Connects tidy'd survival::survfit data to the origin of a plot.
-
