@@ -3,7 +3,7 @@
 [![Total Downloads](https://cranlogs.r-pkg.org/badges/grand-total/utile.visuals)](https://CRAN.R-project.org/package=utile.visuals)
 
 ## Overview
-A small set of functions for making visuals for publication in ggplot2. Includes minimalist themes with transparent backgrounds and a suite of tools for building Kaplan-Meier curves with risk tables.
+A small set of functions for making visuals with ggplot2. Includes minimalist themes with transparent backgrounds and a suite of tools for creating survival curves with risk tables.
 
 ## Functions
 ### > gg
