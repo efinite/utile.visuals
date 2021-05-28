@@ -13,10 +13,8 @@ A small set of functions for making visuals with ggplot2. Includes minimalist th
 - `geom_stepconfint()`: Produces a step function confidence interval for survival curves. Essentially the `ggplot2::geom_step()` for confidence intervals which ggplot2 elects not to provide.
 
 ### > theme_
-- `theme_white()`: A ggplot2 theme which removes most background elements and makes all text/lines white.
-- `theme_black()`: A ggplot2 theme which removes most background elements and makes all text/lines black.
-- `theme_risk_white()`: Minimalist ggplot2 theme which removes most background elements and makes all text/lines white.
-- `theme_risk_black()`: Minimalist ggplot2 theme which removes most background elements and makes all text/lines black.
+- `theme_basic()`: A ggplot2 theme for plots which removes most background elements.
+- `theme_risk()`: Minimalist ggplot2 theme for risk tables which removes most background elements.
 
 ### > append_
 - `append_table()`: Aligns axes and combines a ggplot2 plot and table into a single plot. Can handle legends.
