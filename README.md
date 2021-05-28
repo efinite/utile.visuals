@@ -14,7 +14,7 @@ A small set of functions for making visuals with ggplot2. Includes minimalist th
 
 ### > theme_
 - `theme_basic()`: A ggplot2 theme for plots which removes most background elements.
-- `theme_risk()`: Minimalist ggplot2 theme for risk tables which removes most background elements.
+- `theme_risk()`: A ggplot2 theme for risk tables which removes most background elements.
 
 ### > append_
 - `append_table()`: Aligns axes and combines a ggplot2 plot and table into a single plot. Can handle legends.
