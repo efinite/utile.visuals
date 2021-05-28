@@ -59,5 +59,5 @@ ggplot(
     name = 'Treatment',
     labels = c('None', 'Laser'),
     aesthetics = c('colour', 'fill')) +
-  theme_black()
+  theme_basic()
 }

@@ -40,5 +40,5 @@ ggrisktable(
    fit = fit,
    times = c(0, 10, 20, 30, 40, 50),
    strata.order = c('0', '1')
-) + theme_risk_black()
+) + theme_risk()
 }

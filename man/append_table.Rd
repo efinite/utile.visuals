@@ -83,13 +83,13 @@ plot_km <- ggplot(
     name = 'Treatment',
     labels = c('Laser', 'None'),
     aesthetics = c('colour', 'fill')) +
-  theme_black()
+  theme_basic()
 
 # Risk Table
 tbl_risk <- ggrisktable(fit, c(0, 10, 20, 30, 40, 50)) +
   coord_cartesian(c(0, 50)) +
   scale_x_continuous(expand = c(0.02,0)) +
-  theme_risk_black()
+  theme_risk()
 
 # Combine KM plot and risk table
 plot_cmbd <- append_table(

@@ -21,7 +21,7 @@ utils::globalVariables(c('time', 'strata', 'n.risk'))
 #'    fit = fit,
 #'    times = c(0, 10, 20, 30, 40, 50),
 #'    strata.order = c('0', '1')
-#' ) + theme_risk_black()
+#' ) + theme_risk()
 #' @export
 ggrisktable <- function (fit = NULL, times = NULL, text.color = 'black', strata.order = NULL) {
 

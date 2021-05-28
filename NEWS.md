@@ -1,3 +1,6 @@
+# utile.visuals 0.3.1
+* Consolidation of themes into `theme_basic()` and `theme_risk()`. Line and text color can now be selected with the `base_color` parameter. Additionally, sizes of elements and text now scale correctly with the specified `base_size` parameter.
+
 # utile.visuals 0.3.0
 * `connect_origin()` was removed as it redundantly replicated the function of `survival::survfit0()`. Thanks for the tip, Beth!
 
