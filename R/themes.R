@@ -85,7 +85,7 @@ theme_basic <- function(
 
       # Legend
       legend.title = ggplot2::element_text(
-        size = ggplot2::rel(0.9), color = base_color, margin = ggplot2::margin(b = base_size * 0.4)),
+        color = base_color, margin = ggplot2::margin(b = base_size * 0.4)),
       legend.title.align = 0,
       legend.text = ggplot2::element_text(
         color = base_color, size = ggplot2::rel(0.8)),
