@@ -41,18 +41,18 @@ theme_basic <- function(
         debug = FALSE),
       line = ggplot2::element_line(
         color = base_color,
-        size = base_line_size,
+        linewidth = base_line_size,
         linetype = 1,
         lineend = "square"),
       rect = ggplot2::element_rect(
         fill = "transparent",
         colour = base_color,
-        size = base_rect_size,
+        linewidth = base_rect_size,
         linetype = 1),
 
       # Axis
       axis.line = ggplot2::element_line(
-        colour = base_color, size = base_line_size),
+        colour = base_color, linewidth = base_line_size),
       axis.line.x = NULL,
       axis.line.y = NULL,
       axis.ticks = ggplot2::element_line(color = base_color),
@@ -109,7 +109,7 @@ theme_basic <- function(
 
       # Strip
       strip.background = ggplot2::element_rect(
-        fill = "transparent", colour = base_color, size = ggplot2::rel(2)),
+        fill = "transparent", colour = base_color, linewidth = ggplot2::rel(2)),
       strip.text = ggplot2::element_text(
         color = base_color,
         size = ggplot2::rel(0.8),
@@ -191,13 +191,13 @@ theme_risk <- function(
         debug = FALSE),
       line = ggplot2::element_line(
         color = base_color,
-        size = base_line_size,
+        linewidth = base_line_size,
         linetype = 1,
         lineend = "square"),
       rect = ggplot2::element_rect(
         fill = "transparent",
         colour = base_color,
-        size = base_rect_size,
+        linewidth = base_rect_size,
         linetype = 1),
 
       # Axis
@@ -244,7 +244,7 @@ theme_risk <- function(
 
       # Strip
       strip.background = ggplot2::element_rect(
-        fill = "transparent", colour = base_color, size = ggplot2::rel(2)),
+        fill = "transparent", colour = base_color, linewidth = ggplot2::rel(2)),
       strip.text = ggplot2::element_text(
         color = base_color,
         size = ggplot2::rel(0.8),
