@@ -1,3 +1,8 @@
+# utile.visuals 0.3.2
+* Support for `linewidth` parameter introduced in `ggplot::` version 0.3.4.
+* `theme_basic()` now has more consistent legend title formatting.
+* Fix for a class check error in `ggrisktable()`
+
 # utile.visuals 0.3.1
 * Consolidation of themes into `theme_basic()` and `theme_risk()`. Line and text color can now be selected with the `base_color` parameter. Additionally, sizes of elements and text now scale correctly with the specified `base_size` parameter.
 * Fix for `survfit0` class check issues in `ggrisktable()`.

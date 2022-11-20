@@ -1,6 +1,6 @@
 Package: utile.visuals
 Title: Create Visuals for Publication
-Version: 0.3.1
+Version: 0.3.2
 Authors@R: c(person('Eric', 'Finnesgard', email = 'efinite@outlook.com', role = c('aut', 'cre')))
 Description: A small set of functions to aid in the production of visuals in ggplot2. Includes minimalist themes with transparent backgrounds and tools for building survival curves with risk tables.
 License: LGPL (>= 2)
@@ -10,11 +10,11 @@ Encoding: UTF-8
 Depends: R (>= 3.4.0)
 Imports:
   dplyr,
-  ggplot2,
+  ggplot2 (>= 0.3.4),
   gridExtra,
   purrr
 Suggests:
   survival,
   broom,
   grid
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.2
