@@ -3,6 +3,7 @@
 export(append_table)
 export(geom_stepconfint)
 export(ggrisktable)
+export(panel_border)
 export(theme_basic)
 export(theme_risk)
 importFrom(ggplot2,"%+replace%")
