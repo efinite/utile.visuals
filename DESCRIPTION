@@ -4,7 +4,7 @@ Version: 0.3.2
 Authors@R: c(person('Eric', 'Finnesgard', email = 'efinite@outlook.com', role = c('aut', 'cre')))
 Description: A set of functions to aid in the production of visuals in ggplot2.
 License: LGPL (>= 2)
-URL: https://github.com/efinite/utile.visuals
+URL: https://efinite.github.io/utile.visuals/
 BugReports: https://github.com/efinite/utile.visuals/issues
 Encoding: UTF-8
 Depends: R (>= 3.4.0)
