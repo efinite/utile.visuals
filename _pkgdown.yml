@@ -10,6 +10,7 @@ reference:
     contents:
       - theme_basic
       - theme_risk
+      - panel_border
   - title: "Miscellaneous"
     contents:
       - append_table
