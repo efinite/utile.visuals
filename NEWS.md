@@ -1,6 +1,21 @@
 # utile.visuals (Development)
 
+## New Features
+
+* `panel_border()` function introduced to replace axis lines with a bordered panel.
+Created for use with faceted plots, but can also be used standalone.
+
+## Fixes & Minor Changes
+
 * Added pkgdown site.
+
+* Tweaks to the justification of axis text and scaling of line widths in `theme_basic()`
+& `theme_risk()`.
+
+* Theme facet label margins have been fixed and font size now matches that of axis
+titles.
+
+* Axis ticks in `theme_basic()` now scale appropriately with `base_size`.
 
 
 # utile.visuals 0.3.2
@@ -10,7 +25,7 @@
 
 * `theme_basic()` now has more consistent legend title formatting.
 
-* Fix for a class check error in `ggrisktable()`
+* Fix for a class check error in `ggrisktable()`.
 
 
 # utile.visuals 0.3.1

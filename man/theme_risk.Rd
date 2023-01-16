@@ -8,26 +8,24 @@ theme_risk(
   base_size = 12,
   base_family = "",
   base_color = "black",
-  base_line_size = base_size/14,
-  base_rect_size = base_size/14
+  base_line_size = base_size/12,
+  base_rect_size = base_size/12
 )
 }
 \arguments{
-\item{base_size}{Optional. Numeric. Base font size. Defaults to 10.}
+\item{base_size}{A numeric. Base font size.}
 
-\item{base_family}{Optional. Numeric. Base font family. Defaults to ?.}
+\item{base_family}{A numeric. Base font family.}
 
-\item{base_color}{Optional. Character. Base color for lines and text. Defaults to black.}
+\item{base_color}{A character. Base color for lines and text.}
 
-\item{base_line_size}{Optional. Numeric. Base line element size.
-Defaults to base_size/22.}
+\item{base_line_size}{A numeric. Base line element size.}
 
-\item{base_rect_size}{Optional. Numeric. Base rectangle element size.
-Defaults to base_size/22.}
+\item{base_rect_size}{A numeric. Base rectangle element size.}
 }
 \description{
-A ggplot2 theme which removes most background
-elements.
+A minimalist \code{ggplot2} theme which removes most background elements and
+lines.
 }
 \note{
 Recommend exporting as PNG or TIFF to preserve
