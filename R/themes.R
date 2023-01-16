@@ -53,7 +53,7 @@ theme_basic <- function(
         colour = base_color, linewidth = base_line_size),
       axis.line.x = NULL,
       axis.line.y = NULL,
-      axis.ticks = ggplot2::element_line(color = base_color),
+      axis.ticks = ggplot2::element_line(color = base_color, linewidth = base_line_size),
       axis.ticks.length = ggplot2::unit(base_size / 2.5, "pt"),
       axis.ticks.length.x = NULL,
       axis.ticks.length.x.top = NULL,
