@@ -106,16 +106,12 @@ theme_basic <- function(
       legend.box.spacing = ggplot2::unit(base_size, "pt"),
 
       # Strip
-      strip.background = ggplot2::element_rect(
-        fill = "transparent", colour = base_color, linewidth = ggplot2::rel(2)),
-      strip.text = ggplot2::element_text(
-        color = base_color,
-        size = ggplot2::rel(0.8),
-        margin = ggplot2::margin(base_size/2.5, base_size/2.5, base_size/2.5, base_size/2.5)),
+      strip.background = ggplot2::element_blank(),
+      strip.text = ggplot2::element_text(color = base_color),
       strip.text.x = ggplot2::element_text(
-        margin = ggplot2::margin(b = base_size / 3)),
+        margin = ggplot2::margin(b = base_size / 5, t = base_size / 5)),
       strip.text.y = ggplot2::element_text(
-        angle = -90, margin = ggplot2::margin(l = base_size / 3)),
+        angle = -90, margin = ggplot2::margin(l = base_size / 5, r = base_size / 5)),
       strip.text.y.left = ggplot2::element_text(angle = 90),
       strip.placement = "inside",
       strip.placement.x = NULL,
@@ -239,16 +235,12 @@ theme_risk <- function(
       legend.box.spacing = ggplot2::unit(base_size, "pt"),
 
       # Strip
-      strip.background = ggplot2::element_rect(
-        fill = "transparent", colour = base_color, linewidth = ggplot2::rel(2)),
-      strip.text = ggplot2::element_text(
-        color = base_color,
-        size = ggplot2::rel(0.8),
-        margin = ggplot2::margin(base_size/2.5, base_size/2.5, base_size/2.5, base_size/2.5)),
+      strip.background = ggplot2::element_blank(),
+      strip.text = ggplot2::element_text(color = base_color),
       strip.text.x = ggplot2::element_text(
-        margin = ggplot2::margin(b = base_size / 3)),
+        margin = ggplot2::margin(b = base_size / 5, t = base_size / 5)),
       strip.text.y = ggplot2::element_text(
-        angle = -90, margin = ggplot2::margin(l = base_size / 3)),
+        angle = -90, margin = ggplot2::margin(l = base_size / 5, r = base_size / 5)),
       strip.text.y.left = ggplot2::element_text(angle = 90),
       strip.placement = "inside",
       strip.placement.x = NULL,
