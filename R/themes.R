@@ -1,15 +1,13 @@
 #' @importFrom ggplot2 %+replace%
 
 #' @title Minimalist theme for ggplot2
-#' @description A ggplot2 theme which removes most background
-#' elements.
-#' @param base_size Optional. Numeric. Base font size. Defaults to 14.
-#' @param base_family Optional. Numeric. Base font family. Defaults to ?.
-#' @param base_color Optional. Character. Base color for lines and text. Defaults to black.
-#' @param base_line_size Optional. Numeric. Base line element size.
-#' Defaults to base_size/22.
-#' @param base_rect_size Optional. Numeric. Base rectangle element size.
-#' Defaults to base_size/22.
+#' @description A minimalist \code{ggplot2} theme which removes most background elements and
+#' lines.
+#' @param base_size A numeric. Base font size.
+#' @param base_family A numeric. Base font family.
+#' @param base_color A character. Base color for lines and text.
+#' @param base_line_size A numeric. Base line element size.
+#' @param base_rect_size A numeric. Base rectangle element size.
 #' @note Recommend exporting as PNG or TIFF to preserve
 #' background transparency.
 #' @export
@@ -151,15 +149,13 @@ theme_basic <- function(
 
 
 #' @title Minimalist risk table theme for ggplot2
-#' @description A ggplot2 theme which removes most background
-#' elements.
-#' @param base_size Optional. Numeric. Base font size. Defaults to 10.
-#' @param base_family Optional. Numeric. Base font family. Defaults to ?.
-#' @param base_color Optional. Character. Base color for lines and text. Defaults to black.
-#' @param base_line_size Optional. Numeric. Base line element size.
-#' Defaults to base_size/22.
-#' @param base_rect_size Optional. Numeric. Base rectangle element size.
-#' Defaults to base_size/22.
+#' @description A minimalist \code{ggplot2} theme which removes most background elements and
+#' lines.
+#' @param base_size A numeric. Base font size.
+#' @param base_family A numeric. Base font family.
+#' @param base_color A character. Base color for lines and text.
+#' @param base_line_size A numeric. Base line element size.
+#' @param base_rect_size A numeric. Base rectangle element size.
 #' @note Recommend exporting as PNG or TIFF to preserve
 #' background transparency.
 #' @export
