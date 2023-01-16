@@ -10,6 +10,12 @@
 #' @param base_rect_size A numeric. Base rectangle element size.
 #' @note Recommend exporting as PNG or TIFF to preserve
 #' background transparency.
+#' @examples
+#' library(ggplot2)
+#'
+#' ggplot(datasets::mtcars, aes(x = wt, y = hp, color = as.factor(cyl))) +
+#'   geom_point() +
+#'   theme_basic()
 #' @export
 theme_basic <- function(
   base_size = 12,
@@ -154,6 +160,7 @@ theme_basic <- function(
 #' @param base_rect_size A numeric. Base rectangle element size.
 #' @note Recommend exporting as PNG or TIFF to preserve
 #' background transparency.
+#' @seealso \code{\link{ggrisktable}}
 #' @export
 theme_risk <- function(
   base_size = 12,

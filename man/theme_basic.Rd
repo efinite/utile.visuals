@@ -31,3 +31,10 @@ lines.
 Recommend exporting as PNG or TIFF to preserve
 background transparency.
 }
+\examples{
+library(ggplot2)
+
+ggplot(datasets::mtcars, aes(x = wt, y = hp, color = as.factor(cyl))) +
+  geom_point() +
+  theme_basic()
+}

@@ -6,7 +6,7 @@
 \usage{
 theme_risk(
   base_size = 12,
-  base_family = "",
+  base_family = NULL,
   base_color = "black",
   base_line_size = base_size/12,
   base_rect_size = base_size/12
@@ -30,4 +30,7 @@ lines.
 \note{
 Recommend exporting as PNG or TIFF to preserve
 background transparency.
+}
+\seealso{
+\code{\link{ggrisktable}}
 }
