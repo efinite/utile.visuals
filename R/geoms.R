@@ -1,6 +1,5 @@
 #' @title Step function confidence intervals for ggplot2
-#' @description Produces a step function confidence interval for survival curves. Essentially
-#' the geom_step() for confidence intervals which ggplot2 does not provide.
+#' @description Produces a step function confidence interval for survival curves.
 #' @param mapping Aesthetic mappings with aes() function. Like geom_ribbon(), you must provide
 #' columns for x, ymin (lower limit), ymax (upper limit).
 #' @param data The data to be displayed in this layer. Can inherit from ggplot parent.

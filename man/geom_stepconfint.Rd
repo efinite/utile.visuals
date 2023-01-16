@@ -31,8 +31,7 @@ missing values are silently removed.}
 \item{...}{Optional. Any other ggplot geom_ribbon() arguments.}
 }
 \description{
-Produces a step function confidence interval for survival curves. Essentially
-the geom_step() for confidence intervals which ggplot2 does not provide.
+Produces a step function confidence interval for survival curves.
 }
 \note{
 Adapted from the survminer package <https://github.com/kassambara/survminer>.
