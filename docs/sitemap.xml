@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>/404.html</loc>
+  </url>
+  <url>
+    <loc>/authors.html</loc>
+  </url>
+  <url>
+    <loc>/index.html</loc>
+  </url>
+  <url>
+    <loc>/news/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/append_table.html</loc>
+  </url>
+  <url>
+    <loc>/reference/geom_stepconfint.html</loc>
+  </url>
+  <url>
+    <loc>/reference/ggrisktable.html</loc>
+  </url>
+  <url>
+    <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/theme_basic.html</loc>
+  </url>
+  <url>
+    <loc>/reference/theme_risk.html</loc>
+  </url>
+</urlset>

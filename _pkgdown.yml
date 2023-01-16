@@ -1,0 +1,15 @@
+url: ~
+template:
+  bootstrap: 5
+reference:
+  - title: "Survival Plots"
+    contents:
+      - geom_stepconfint
+      - ggrisktable
+  - title: "Themes"
+    contents:
+      - theme_basic
+      - theme_risk
+  - title: "Miscellaneous"
+    contents:
+      - append_table
