@@ -283,3 +283,27 @@ theme_risk <- function(
       complete = TRUE
     )
 }
+
+
+#' @title Add a panel border to a ggplot2 plot
+#' @description A simple \code{ggplot2} theme which replaces the axis lines with
+#' a bordered panel.
+#' @param base_size A numeric. Base size. Used to calculate line size and spacing.
+#' @param base_color A character. Base color for lines.
+#' @note This should be placed after the primary theme for the plot.
+#' @examples
+#' library(ggplot2)
+#'
+#' ggplot(datasets::mtcars, aes(x = wt, y = hp, color = as.factor(cyl))) +
+#'   geom_point() +
+#'   facet_wrap(~as.logical(am)) +
+#'   theme_basic() +
+#'   panel_border()
+#' @export
+panel_border <- function (base_size = 12, base_color = NULL) {
+  ggplot2::theme(
+    axis.line = ggplot2::element_blank(),
+    panel.border = ggplot2::element_rect(color = base_color, linewidth = base_size / 6),
+    panel.spacing = ggplot2::unit(base_size / 12, 'lines')
+  )
+}
