@@ -13,10 +13,10 @@
 #' @export
 theme_basic <- function(
   base_size = 12,
-  base_family = "",
+  base_family = NULL,
   base_color = "black",
-  base_line_size = base_size/14,
-  base_rect_size = base_size/14
+  base_line_size = base_size/12,
+  base_rect_size = base_size/12
 ) {
   ggplot2::theme_bw(
     base_size = base_size,
@@ -73,11 +73,11 @@ theme_basic <- function(
       axis.text = ggplot2::element_text(
         size = ggplot2::rel(0.95), color = base_color),
       axis.text.x = ggplot2::element_text(
-        margin = ggplot2::margin(t = 0.8 * base_size / 4), vjust = 0.5),
+        margin = ggplot2::margin(t = 0.8 * base_size / 4), vjust = 0.25),
       axis.text.x.top = ggplot2::element_text(
         margin = ggplot2::margin(b = 0.8 * base_size / 4),vjust = 0),
       axis.text.y = ggplot2::element_text(
-        margin = ggplot2::margin(r = 0.8 * base_size / 4), hjust = 0.5),
+        margin = ggplot2::margin(r = 0.8 * base_size / 4), hjust = 0.25),
       axis.text.y.right = ggplot2::element_text(
         margin = ggplot2::margin(l = 0.8 * base_size / 4), hjust = 0),
 
@@ -161,10 +161,10 @@ theme_basic <- function(
 #' @export
 theme_risk <- function(
   base_size = 12,
-  base_family = "",
+  base_family = NULL,
   base_color = "black",
-  base_line_size = base_size/14,
-  base_rect_size = base_size/14
+  base_line_size = base_size/12,
+  base_rect_size = base_size/12
 ) {
   ggplot2::theme_bw(
     base_size = base_size,
@@ -211,7 +211,7 @@ theme_risk <- function(
       axis.text.x = ggplot2::element_blank(),
       axis.text.x.top = ggplot2::element_blank(),
       axis.text.y = ggplot2::element_text(
-        margin = ggplot2::margin(r = 0.8 * base_size / 4), hjust = 0.5),
+        margin = ggplot2::margin(r = 0.8 * base_size / 4), hjust = 0.25),
       axis.text.y.right = ggplot2::element_text(
         margin = ggplot2::margin(l = 0.8 * base_size / 4), hjust = 0),
 
