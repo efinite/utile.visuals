@@ -1,11 +1,11 @@
 # utile.visuals 0.3.3
 
-## New Features
+### New Features
 
 * `panel_border()` function introduced to replace axis lines with a bordered panel.
 Created for use with faceted plots, but can also be used standalone.
 
-## Fixes & Minor Changes
+### Fixes & Minor Changes
 
 * Added pkgdown site.
 
@@ -20,7 +20,7 @@ titles.
 
 # utile.visuals 0.3.2
 
-## Fixes & Minor Changes
+### Fixes & Minor Changes
 * Support for `linewidth` parameter introduced in `ggplot::` version 0.3.4.
 
 * `theme_basic()` now has more consistent legend title formatting.
