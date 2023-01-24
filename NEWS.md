@@ -1,4 +1,4 @@
-# utile.visuals (Development)
+# utile.visuals 0.3.3
 
 ## New Features
 

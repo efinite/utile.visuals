@@ -1,6 +1,6 @@
 Package: utile.visuals
 Title: Create Visuals for Publication
-Version: 0.3.2
+Version: 0.3.3
 Authors@R: c(person('Eric', 'Finnesgard', email = 'efinite@outlook.com', role = c('aut', 'cre')))
 Description: A set of functions to aid in the production of visuals in ggplot2.
 License: LGPL (>= 2)

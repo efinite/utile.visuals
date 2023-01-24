@@ -5,8 +5,7 @@
 ## Overview
 A set of themes and functions for making visuals with ggplot2.
 
-## Functions
-### Survival
+### Survival Curves
 - `ggrisktable()`: Creates a ggplot2 risk table for a `survival::survfit` object.
 - `geom_stepconfint()`: Produces a step function confidence interval for plotted 
 survival curves.
