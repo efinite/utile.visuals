@@ -23,7 +23,6 @@
 #' @examples
 #' library(survival)
 #' library(ggplot2)
-#' library(broom) # tidy() model data
 #' library(grid) # grid.draw() finished plot
 #'
 #' # Data with group names specified
@@ -36,8 +35,14 @@
 #'
 #' # Kaplan Meier (KM) Plot
 #' plot_km <- ggplot(
-#'  data = tidy(fit),
-#'  mapping = aes(x = time, y = estimate)
+#'  data = data.frame(
+#'   time = fit$time,
+#'   surv = fit$surv,
+#'   conf.low = fit$lower,
+#'   conf.high = fit$upper,
+#'   strata = rep(names(fit$strata), fit$strata)
+#'  ),
+#'  mapping = aes(x = time, y = surv)
 #' ) +
 #'   geom_step(aes(color = strata)) +
 #'   geom_stepconfint(aes(ymin = conf.low, ymax = conf.high, fill = strata), alpha = 0.3) +

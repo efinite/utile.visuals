@@ -13,15 +13,20 @@
 #' @note Adapted from the survminer package <https://github.com/kassambara/survminer>.
 #' @examples
 #' library(survival)
-#' library(broom)
 #' library(ggplot2)
 #'
 #' fit <- survfit(Surv(time, status) ~ trt, data = diabetic)
 #' fit <- survfit0(fit) # connect origin
 #'
 #' ggplot(
-#'   data = tidy(fit),
-#'   mapping = aes(x = time, y = estimate)
+#'   data = data.frame(
+#'     time = fit$time,
+#'     surv = fit$surv,
+#'     conf.low = fit$lower,
+#'     conf.high = fit$upper,
+#'     strata = rep(names(fit$strata), fit$strata)
+#'   ),
+#'   mapping = aes(x = time, y = surv)
 #' ) +
 #'   geom_step(aes(color = strata)) +
 #'   geom_stepconfint(aes(ymin = conf.low, ymax = conf.high, fill = strata), alpha = 0.3) +

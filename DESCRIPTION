@@ -15,6 +15,5 @@ Imports:
   purrr
 Suggests:
   survival,
-  broom,
   grid
 RoxygenNote: 7.2.3
