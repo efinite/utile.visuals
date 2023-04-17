@@ -1,3 +1,13 @@
+# utile.visuals 0.3.4
+
+### Fixes & Minor Changes
+
+* Removed the `broom` package from suggests and from example documentation.
+
+* Removed the `extract.legend = ` argument from the `append_table()` function. Legend extraction is now automatically performed if one is present.
+
+* `append_table()` now vertically offsets the legend box instead of the legend itself. This fixes a spacing issue when multiple legends are present.
+
 # utile.visuals 0.3.3
 
 ### New Features

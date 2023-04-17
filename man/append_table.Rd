@@ -10,36 +10,31 @@ append_table(
   plot.height = 1,
   table.height = 0.1,
   plot.width = 1,
-  extract.legend = TRUE,
   legend.width = 0.2,
   legend.offset = -15
 )
 }
 \arguments{
-\item{plot}{Required. ggplot2::ggplot() object. If a legend is present, it will be
+\item{plot}{A ggplot2::ggplot() object. If a legend is present, it will be
 extracted.}
 
-\item{table}{Required. ggplot2::ggplot object. If a legend is present, it will
+\item{table}{A ggplot2::ggplot object. If a legend is present, it will
 be removed and ignored.}
 
-\item{plot.height}{Optional. Numeric. Height of plot relative to table. Defaults
+\item{plot.height}{A numeric. Height of plot relative to table. Defaults
 to 1.}
 
-\item{table.height}{Optional. Numeric. Height of table relative to plot. Defaults
+\item{table.height}{A numeric. Height of table relative to plot. Defaults
 to 0.1.}
 
-\item{plot.width}{Optional. Numeric. Width of plot relative to legend. Ignored
+\item{plot.width}{A numeric. Width of plot relative to legend. Ignored
 if no legend present in plot. Defaults to 1.}
 
-\item{extract.legend}{Optional. Logical. Indicates whether to extract the legend
-from the plot and reinsert it adjacent to the final combined plot. May be undesired
-if legend already embedded within the plot area. Defaults to TRUE.}
+\item{legend.width}{A numeric. Width of legend relative to plot. Ignored
+if no legend present in plot. Defaults 0.2.}
 
-\item{legend.width}{Optional. Numeric. Width of legend relative to plot. Ignored
-if no legend present in plot or 'extract.legend'=FALSE. Defaults 0.2.}
-
-\item{legend.offset}{Optional. Numeric. Vertical offset of legend. Used to raise
-or lower. Ignored if no legend present in plot or 'extract.legend'=FALSE. Defaults
+\item{legend.offset}{A numeric. Vertical offset of legend box. Used to raise
+or lower. Ignored if no legend present in plot. Defaults
 to -15.}
 }
 \value{
@@ -57,7 +52,6 @@ and breaks!
 \examples{
 library(survival)
 library(ggplot2)
-library(broom) # tidy() model data
 library(grid) # grid.draw() finished plot
 
 # Data with group names specified
@@ -67,11 +61,18 @@ levels(data_diabetic$trt) <- c('None', 'Laser')
 
 # Survival Model
 fit <- survfit(Surv(time, status) ~ trt, data = data_diabetic)
+fit <- survfit0(fit)
 
 # Kaplan Meier (KM) Plot
 plot_km <- ggplot(
- data = tidy(fit),
- mapping = aes(x = time, y = estimate)
+ data = data.frame(
+  time = fit$time,
+  surv = fit$surv,
+  conf.low = fit$lower,
+  conf.high = fit$upper,
+  strata = rep(names(fit$strata), fit$strata)
+ ),
+ mapping = aes(x = time, y = surv)
 ) +
   geom_step(aes(color = strata)) +
   geom_stepconfint(aes(ymin = conf.low, ymax = conf.high, fill = strata), alpha = 0.3) +
