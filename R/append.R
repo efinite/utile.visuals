@@ -1,15 +1,15 @@
 #' @title Append a ggplot2 table to the bottom of a ggplot2 plot
 #' @description Aligns axes and combines a ggplot2 plot and table into a single plot.
 #' Can handle legends.
-#' @param plot Required. ggplot2::ggplot() object. If a legend is present, it will be
+#' @param plot A ggplot2::ggplot() object. If a legend is present, it will be
 #' extracted.
-#' @param table Required. ggplot2::ggplot object. If a legend is present, it will
+#' @param table A ggplot2::ggplot object. If a legend is present, it will
 #' be removed and ignored.
-#' @param plot.height Optional. Numeric. Height of plot relative to table. Defaults
+#' @param plot.height A numeric. Height of plot relative to table. Defaults
 #' to 1.
-#' @param table.height Optional. Numeric. Height of table relative to plot. Defaults
+#' @param table.height A numeric. Height of table relative to plot. Defaults
 #' to 0.1.
-#' @param plot.width Optional. Numeric. Width of plot relative to legend. Ignored
+#' @param plot.width A numeric. Width of plot relative to legend. Ignored
 #' if no legend present in plot. Defaults to 1.
 #' @param legend.width A numeric. Width of legend relative to plot. Ignored
 #' if no legend present in plot. Defaults 0.2.
@@ -32,6 +32,7 @@
 #'
 #' # Survival Model
 #' fit <- survfit(Surv(time, status) ~ trt, data = data_diabetic)
+#' fit <- survfit0(fit)
 #'
 #' # Kaplan Meier (KM) Plot
 #' plot_km <- ggplot(
