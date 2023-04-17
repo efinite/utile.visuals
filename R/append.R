@@ -11,13 +11,10 @@
 #' to 0.1.
 #' @param plot.width Optional. Numeric. Width of plot relative to legend. Ignored
 #' if no legend present in plot. Defaults to 1.
-#' @param extract.legend Optional. Logical. Indicates whether to extract the legend
-#' from the plot and reinsert it adjacent to the final combined plot. May be undesired
-#' if legend already embedded within the plot area. Defaults to TRUE.
-#' @param legend.width Optional. Numeric. Width of legend relative to plot. Ignored
-#' if no legend present in plot or 'extract.legend'=FALSE. Defaults 0.2.
-#' @param legend.offset Optional. Numeric. Vertical offset of legend. Used to raise
-#' or lower. Ignored if no legend present in plot or 'extract.legend'=FALSE. Defaults
+#' @param legend.width A numeric. Width of legend relative to plot. Ignored
+#' if no legend present in plot. Defaults 0.2.
+#' @param legend.offset A numeric. Vertical offset of legend box. Used to raise
+#' or lower. Ignored if no legend present in plot. Defaults
 #' to -15.
 #' @return A ggplot2 tableGrob object. Use grid::grid.draw() to open in RStudio viewer.
 #' Works with ggplot2::ggsave() out of the box.
@@ -72,8 +69,7 @@
 #' @export
 append_table <- function(
   plot = NULL, table = NULL, plot.height = 1,
-  table.height = 0.1, plot.width = 1, extract.legend = TRUE,
-  legend.width = 0.2, legend.offset = -15
+  table.height = 0.1, plot.width = 1, legend.width = 0.2, legend.offset = -15
 ) {
 
   # Hard stops
@@ -83,27 +79,25 @@ append_table <- function(
     stop('Both plot and table heights must be specified. Check \'plot.height\', \'table.height\'.')
 
   # Convert plots to grobs
-  if (extract.legend) plot <- plot +
-      ggplot2::theme(
-        legend.margin = ggplot2::margin(legend.offset, 0, 0, 0, unit = 'mm'),
-        legend.justification = NULL,
-        legend.position = NULL
-      )
+  plot <- plot +
+    ggplot2::theme(
+      legend.box.margin = ggplot2::margin(legend.offset, 0, 0, 0, unit = 'mm'),
+      legend.justification = NULL,
+      legend.position = NULL
+    )
   grob_plot <- ggplot2::ggplotGrob(plot)
   grob_tbl <- ggplot2::ggplotGrob(table + ggplot2::theme(legend.position = 'none')) # drop table legend
 
   # Extract legend, if present
-  if (extract.legend) {
-    legend_row <- which(purrr::map_chr(grob_plot$grobs, ~ .x$name) == 'guide-box')
-    if (length(legend_row) > 0) {
+  legend_row <- which(purrr::map_chr(grob_plot$grobs, ~ .x$name) == 'guide-box')
+  if (length(legend_row) > 0) {
 
-      # Hard stop
-      if (!is.numeric(plot.width) | !is.numeric(legend.width))
-        stop('Widths for both plot & legend required. Check [\'legend.width\', \'plot.width\'].')
+    # Hard stop
+    if (!is.numeric(plot.width) | !is.numeric(legend.width))
+      stop('Widths for both plot & legend required. Check [\'legend.width\', \'plot.width\'].')
 
-      grob_legend <- grob_plot$grobs[[legend_row]]
-      grob_plot <- ggplot2::ggplotGrob(plot + ggplot2::theme(legend.position = 'none'))
-    }
+    grob_legend <- grob_plot$grobs[[legend_row]]
+    grob_plot <- ggplot2::ggplotGrob(plot + ggplot2::theme(legend.position = 'none'))
   }
 
   # Combine plot grobs
@@ -117,7 +111,7 @@ append_table <- function(
   grob_combined$heights[panels[2]] <- ggplot2::unit(table.height, "null") # Set table height
 
   # Return new arrangement
-  if (extract.legend & exists('grob_legend'))
+  if (exists('grob_legend'))
     gridExtra::arrangeGrob(
       grob_combined,
       grob_legend,
