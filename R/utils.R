@@ -1,6 +1,6 @@
 .tabulate_at_risk <- function(fit = NULL, times = NULL) {
   fit_summary <- summary(fit, times = times)
-  dplyr::bind_cols(
+  vctrs::vec_cbind(
     strata = as.factor(
       if (is.null(fit$strata)) rep('All', length(times))
       else

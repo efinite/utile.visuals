@@ -2,6 +2,8 @@
 
 ### Fixes & Minor Changes
 
+* Replaced `dplyr` dependency with `vctrs`.
+
 * Removed the `broom` package from suggests and from example documentation.
 
 * Removed the `extract.legend = ` argument from the `append_table()` function. Legend extraction is now automatically performed if one is present.

@@ -9,10 +9,10 @@ BugReports: https://github.com/efinite/utile.visuals/issues
 Encoding: UTF-8
 Depends: R (>= 3.4.0)
 Imports:
-  dplyr,
   ggplot2 (>= 0.3.4),
   gridExtra,
-  purrr
+  purrr,
+  vctrs
 Suggests:
   survival,
   grid
